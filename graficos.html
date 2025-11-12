@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gráficos Interativos - Análise SP</title>
+  <link rel="stylesheet" href="estilos/style1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Gráficos Interativos</h1>
+    <p>Visualizações dinâmicas dos dados urbanos de São Paulo</p>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="poluicao.html">Poluição</a></li>
+      <li><a href="comercio.html">Comércio</a></li>
+      <li><a href="doencas.html">Doenças</a></li>
+      <li><a href="lazer.html">Lazer</a></li>
+      <li><a href="imigracao.html">Imigração</a></li>
+      <li><a href="graficos.html">Gráficos</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section>
+      <h2>Visualizações Interativas</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+        Explore os gráficos interativos que complementam os mapas de calor, oferecendo uma leitura temporal e comparativa dos dados urbanos.
+      </p>
+
+      <div class="map-container">
+        <h3>Gráfico de Poluição do Ar</h3>
+        <iframe class="map-iframe" src="graficosit/grafico_ar_interativo_plotly.html" loading="lazy" allowfullscreen></iframe>
+      </div>
+
+      <div class="map-container">
+        <h3>Gráfico de Blocos de Carnaval</h3>
+        <iframe class="map-iframe" src="graficosit/grafico_carnaval_interativo.html" loading="lazy" allowfullscreen></iframe>
+      </div>
+
+      <div class="map-container">
+        <h3>Gráfico de Presença Comercial</h3>
+        <iframe class="map-iframe" src="graficosit/grafico_cnpj_interativo.html" loading="lazy" allowfullscreen></iframe>
+      </div>
+
+      <div class="map-container">
+        <h3>Gráfico de Doenças Registradas</h3>
+        <iframe class="map-iframe" src="graficosit/grafico_doencas_interativo.html" loading="lazy" allowfullscreen></iframe>
+      </div>
+
+      <div class="map-container">
+        <h3>Gráfico de imigrantes e refugiados</h3>
+        <iframe class="map-iframe" src="graficosit/grafico_imigrantes.html" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Análise SP</h3>
+          <p>Fornecemos análises urbanas detalhadas da cidade de São Paulo através de dados e visualizações interativas.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="poluicao.html">Poluição</a></li>
+            <li><a href="comercio.html">Comércio</a></li>
+            <li><a href="doencas.html">Doenças</a></li>
+            <li><a href="lazer.html">Lazer</a></li>
+            <li><a href="imigracao.html">Imigração</a></li>
+            <li><a href="graficos.html">Gráficos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+          
+          
+        
+       
+     
+      </div>
+      <div class="footer-column">
+                    <h3>Contato</h3>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>R. Topázio, 555 - Jardim Nomura, Cotia - SP, 06717-235</span>
+                            
+                            
+                            </div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>AnaliGeoSP@gmail.com</span>
+                        </div>
+      
+      <div class="copyright">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Análise São Paulo. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <div class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.pageYOffset > 300);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

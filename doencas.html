@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doenças - Análise SP</title>
+  <link rel="stylesheet" href="estilos/style1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Análise Multidimensional da Cidade de São Paulo</h1>
+    <p>Estudo técnico sobre a distribuição de doenças na maior metrópole da América Latina</p>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="poluicao.html">Poluição</a></li>
+      <li><a href="comercio.html">Comércio</a></li>
+      <li><a href="doencas.html">Doenças</a></li>
+      <li><a href="lazer.html">Lazer</a></li>
+      <li><a href="imigracao.html">Imigração</a></li>
+      <li><a href="graficos.html">Gráficos</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section>
+      <h2>Doenças Registradas</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+        Este mapa interativo mostra a concentração espacial de doenças notificadas, com foco em arboviroses, na cidade de São Paulo.
+      </p>
+
+      <!-- Mapa interativo -->
+      <div class="map-container">
+        <iframe class="map-iframe" src="mapas_de_calor/calor_doencas.html" loading="lazy" allowfullscreen></iframe>
+      </div>
+
+      <!-- Legenda -->
+      <div class="map-container">
+        <img src="Imagens/mapa das doenças.jpg" alt="Legenda do mapa de doenças" class="herança1" />
+      </div>
+
+      <!-- Card explicativo -->
+      <div class="card">
+        <h2>Doenças Registradas</h2>
+        <p>Os registros de doenças se concentram nas zonas de maior densidade populacional e menor infraestrutura sanitária, revelando a sobreposição entre vulnerabilidade social e risco epidemiológico. As áreas mais afetadas estão próximas a regiões centrais e de comércio intenso, o que indica que os fatores ambientais e humanos se cruzam: poluição, moradia precária e alta circulação de pessoas criam um cenário propício para a proliferação de doenças. O padrão também sugere que comunidades migrantes e periféricas são as mais expostas, reforçando o impacto desigual da urbanização sobre a saúde coletiva.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+   <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Análise SP</h3>
+          <p>Fornecemos análises urbanas detalhadas da cidade de São Paulo através de dados e visualizações interativas.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="poluicao.html">Poluição</a></li>
+            <li><a href="comercio.html">Comércio</a></li>
+            <li><a href="doencas.html">Doenças</a></li>
+            <li><a href="lazer.html">Lazer</a></li>
+            <li><a href="imigracao.html">Imigração</a></li>
+            <li><a href="graficos.html">Gráficos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+          
+          
+        
+       
+     
+      </div>
+      <div class="footer-column">
+                    <h3>Contato</h3>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>R. Topázio, 555 - Jardim Nomura, Cotia - SP, 06717-235</span>
+                            
+                            
+                            </div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>AnaliGeoSP@gmail.com</span>
+                        </div>
+      
+      <div class="copyright">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Análise São Paulo. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Botão voltar ao topo -->
+  <div class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Script de rolagem -->
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.pageYOffset > 300);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
